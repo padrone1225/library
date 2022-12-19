@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container logo">
+            <h1 class="title">Library</h1>
+            <div class="header-button-group">
+                <!-- <button class="change-view" id="changeViewBtn">AA -->
+                <a href="index-2.html">AA</a>
+                <!-- </button> -->
+                <button class="change-lgiht" id="changeModeBtn">light</button>
+                <button class="add-book" id="addBookBtn">Add</button>
+                <button class="log" id="logInBtn">login</button>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <div class="container">
+            <div class="books-grid" id="booksGrid"></div>
+        </div>
+    </main>
+    <footer>
+        <h1>Copyright</h1>
+    </footer>
+    <div class="modal" id="addBookModal">
+        <form class="add-book-form" id="addBookForm">
+            <h3>Add new book</h3>
+            <input type="text" class="input" id="title" placeholder="Title" maxlength="100" required>
+            <p class="error-msg" id="errorMsg"></p>
+            <input type="text" class="input" id="author" placeholder="Author" maxlength="100" required>
+            <input type="number" class="input" id="pages" placeholder="Pages" min="0" max="10000" required>
+            <div class="is-read">
+                <label for="isRead">Have you read it?</label>
+                <input type="checkbox" class="checkbox" id="isRead">
+            </div>
+            <button class="btn btn-light-green" type="submit">Add</button>
+        </form>
+    </div>
+    <div class="overlay" id="overlay"></div>
+</body>
+
+</html>
