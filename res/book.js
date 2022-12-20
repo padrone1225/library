@@ -52,6 +52,14 @@ class Book {
   }
 
   /**
+   * Is Deleted
+   * @returns {boolean}
+   */
+  isDeleted() {
+    return this.deleted === 1;
+  }
+
+  /**
    * Not Deleted
    * @return {boolean}  - T/F
    */
@@ -64,6 +72,14 @@ class Book {
    */
   toggleStatus() {
     this.status = this.status ? 0 : 1;
+  }
+
+  /**
+   * Get human-readable Read/Unread Status
+   * @returns {string}
+   */
+  getStatus() {
+    return this.status ? "Read" : "Unread";
   }
 
   /**
@@ -108,14 +124,6 @@ class Book {
    */
   getAcquired() {
     return Book.#formatDate(this.acquired);
-  }
-
-  /**
-   * Get human-readable Read/Unread Status
-   * @returns {string}  - Status
-   */
-  getStatus() {
-    return this.status ? "Read" : "Unread";
   }
 
   /**
