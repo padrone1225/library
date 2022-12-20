@@ -114,7 +114,7 @@ class Book {
    * Get Formatted Published Date
    * @returns {string}  - Published Date
    */
-  getPubhlised() {
+  getPublished() {
     return Book.#formatDate(this.published);
   }
 

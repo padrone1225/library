@@ -214,6 +214,33 @@ main tbody tr:nth-child(odd) {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+main tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+main tbody tr:hover {
+  outline: 1px solid var(--color-accent);
+}
+
+main tbody td {
+  border: 0;
+  padding: 1em;
+  text-align: right;
+}
+
+main tbody tr td:nth-child(1) {
+  text-align: center;
+}
+
+main tbody tr td:nth-child(2),
+main tbody tr td:nth-child(3) {
+  text-align: left;
+}
+
+main tbody tr td:last-child {
+  white-space: nowrap;
+}
+
 /* Table Foot */
 main tfoot tr {
   background-color: var(--color-dark);
@@ -320,4 +347,128 @@ footer {
 #modal_settings form input[type="color"] {
   display: block;
   width: 100%;
+}
+
+/* Edit Entry */
+#modal_edit {
+  display: none;
+}
+
+#modal_edit form {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 2fr;
+}
+
+#modal_edit form button {
+  grid-column: 1 / span 2;
+}
+
+/* Recycle Bin */
+
+#modal_recycle {
+  display: none;
+}
+
+#modal_recycle label {
+  display: none;
+}
+
+#modal_recycle select {
+  display: block;
+  margin: 0 0 1em;
+  padding: 0.5em;
+  width: 100%;
+}
+
+#modal_recycle select option {
+  border-radius: 0.5em;
+  display: block;
+  padding: 0.5em;
+  margin: 0.2em 0;
+  width: 100%;
+}
+
+#modal_recycle select option:checked {
+  background: linear-gradient(0deg, var(--color-bg) 0%, var(--color-bg) 100%);
+  color: var(--color-text);
+}
+
+#modal_recycle select:focus option:checked {
+  background: linear-gradient(
+    0deg,
+    var(--color-accent) 0%,
+    var(--color-accent) 100%
+  );
+  color: var(--color-dark);
+}
+
+#modal_recycle div {
+  align-items: stretch;
+  display: flex;
+  gap: 0.5em;
+  justify-content: stretch;
+}
+
+#modal_recycle button {
+  flex: 1;
+  padding: 0.5em 2em;
+  white-space: nowrap;
+}
+
+/* History */
+#modal_default {
+  display: none;
+}
+
+#modal_default p {
+  max-width: 40ch;
+}
+
+#modal_default p:nth-child(4) {
+  font-style: italic;
+  max-width: 40ch;
+  text-align: center;
+}
+
+#modal_default div {
+  align-items: stretch;
+  display: flex;
+  gap: 0.5em;
+  justify-content: stretch;
+}
+
+#modal_default button {
+  flex: 1;
+  padding: 0.5em 2em;
+  white-space: nowrap;
+}
+
+/* Scroll Bar */
+body * {
+  scrollbar-color: var(--color-bg) transparent;
+}
+
+body *::-webkit-scrollbar {
+  width: auto;
+  height: auto;
+}
+
+body *::-webkit-scrollbar-button,
+body *::-webkit-scrollbar-thumb {
+  background-color: var(--color-bg);
+  background-clip: padding-box;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+body *::-webkit-scrollbar-corner,
+body *::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body *::-webkit-scrollbar-button:hover,
+body *::-webkit-scrollbar-thumb:hover,
+body *::-webkit-scrollbar-thumb:active {
+  background-color: var(--color-accent);
 }

@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./res/library.css">
     <link rel="icon" sizes="any" type="image/svg+xml" href="./img/library.svg">
     <script type="module">
-        console.log('%$%^')
         import Library from './res/library.js'
         window.addEventListener('DOMContentLoaded', () => {
             new Library;
@@ -112,7 +111,7 @@
             <div>Unique Authors <span id="total_authors"></span></div>
             <div>Read Books <span id="total_read"></span></div>
             <div>Unread Books <span id="total_unread"></span></div>
-            <div>Deleted Books <span id="totla_trash"></span></div>
+            <div>Deleted Books <span id="total_trash"></span></div>
         </section>
     </main>
     <!-- -- Footer -- -->
@@ -141,6 +140,55 @@
                 <button type="button" id="settings-reset">Reset</button>
                 <button type="button" id="settings-save">Save</button>
             </form>
+        </div>
+
+        <!-- -- Add New Book -- -->
+        <div id="modal_edit">
+            <h3>Add New Book</h3>
+            <form id="new_book">
+                <label for="new_title">Title</label>
+                <input type="text" name="new_title" id="new_title" required>
+                <label for="new_author">Author</label>
+                <input type="text" name="new_author" id="new_author" required>
+                <label for="new_pages">Pages</label>
+                <input type="number" name="new_pages" id="new_pages" min="1" max="9999" required>
+                <label for="new_published">Published</label>
+                <input type="date" name="new_published" id="new_published" required>
+                <label for="new_acquired">Acquired</label>
+                <input type="date" name="new_acquired" id="new_acquired" required>
+                <label for="new_status">Status</label>
+                <select name="new_status" id="new_status">
+                    <option value="0">Unread</option>
+                    <option value="1">Read</option>
+                </select>
+                <button type="submit">Add Book</button>
+                <input type="hidden" name="new_id" id="new_id" value="">
+            </form>
+        </div>
+
+        <!-- -- Recycle Bin -- -->
+        <div id="modal_recycle">
+            <h3>Deleted Books</h3>
+            <form>
+                <label for="deleted_books">Deleted Books</label>
+                <select name="deleted_books[]" id="deleted_books" size="10" multiple></select>
+                <div>
+                    <button type="button" id="deleted_erase">Purge Selected</button>
+                    <button type="button" id="deleted_restore">Restore Selected</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- -- Restore Defaults -- -->
+        <div id="modal_default">
+            <h3>Restore Defaults</h3>
+            <p>This will erase all user created data and restore the books and settings data to their original default
+                values.</p>
+            <p>This action <strong>cannot</strong> be undone!</p>
+            <div>
+                <button id="default_cancel" type="button">Cancel</button>
+                <button id="default_confirm" type="button">Continue</button>
+            </div>
         </div>
     </div>
 </body>
