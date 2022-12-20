@@ -5,7 +5,7 @@
  * @property {array} styles     - Array of Style Keys
  * @property {object} storage   - LocalStorage
  */
-console.log("THEME");
+
 class Theme {
   // Class Properties
   settings = {};
@@ -27,11 +27,15 @@ class Theme {
     // Class Properties
     this.storage = window.localStorage;
     this.modal = modal;
-    console.log("style", this.styles);
 
     // Load Settings
     if (this.storage.hasOwnProperty("lib_settings")) {
       // Load from LocalStorage
+      this.settings = JSON.parse(this.storage.getItem("lib_settings"));
+      this.styles.forEach((style) => {
+        // Set Value in Stylesheet
+        this.setStyleProperty(style, this.settings[style]);
+      });
     } else {
       // Build {settings} from [styles] and css
       this.styles.forEach((index) => {
@@ -86,7 +90,7 @@ class Theme {
       }
 
       this.storage.setItem("lib_settings", JSON.stringify(this.settings));
-      //   this.modal.close("modal_settins");
+      this.modal.close("modal_settings");
     });
   }
 
