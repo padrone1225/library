@@ -6,47 +6,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./res/library.css">
+    <link rel="icon" sizes="any" type="image/svg+xml" href="./img/library.svg">
+    <script type="module">
+        console.log('%$%^')
+        import Library from './res/library.js'
+        window.addEventListener('DOMContentLoaded', () => {
+            new Library;
+        });
+    </script>
 </head>
 
 <body>
-    <header class="header">
-        <div class="container logo">
-            <h1 class="title">Library</h1>
-            <div class="header-button-group">
-                <!-- <button class="change-view" id="changeViewBtn">AA -->
-                <a href="index-2.html">AA</a>
-                <!-- </button> -->
-                <button class="change-lgiht" id="changeModeBtn">light</button>
-                <button class="add-book" id="addBookBtn">Add</button>
-                <button class="log" id="logInBtn">login</button>
-            </div>
+    <!-- -- Header -- -->
+    <header>
+        <h1>
+            <svg id="books" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 54.2448">
+                <g id="layer">
+                    <path id="pages" class="cls-1"
+                        d="M36.1774,28.5556S7.9472,21.847,5.5107,21.7778c-3.9131-.1111-6.9551,5.9006-1.2222,8.236,3.1038,1.2644,3.6966.3283.0518,1.0976-3.685.7777-5.007,8.2926-.2864,9.4371,2.141.5191-8.4983,4.4515.1182,10.1127,3.2494,2.1349,31.4292,7.173,31.4292,7.173s29.0761-14.58,28.0448-15.9453C62.7329,40.68,59.6138,38.1243,63.0243,33c.6655-1,1.2756-.2,0-1.4444-1.58-1.5418-2.8956-5.15,0-8.7778.9757-1.2223.1569-.09-.4687-1-1.2223-1.7778-1.2223-6.2222,1.09-9C65.339,10.7445,36.1774,28.5556,36.1774,28.5556Z"
+                        transform="translate(0 -4.5651)" />
+                    <path id="bottom" class="cls-2"
+                        d="M5.0794,41.0776c-2.2665,0-4.1037,2.25-4.1037,5.026A4.7342,4.7342,0,0,0,5.0794,51.13l30.5219,6.7047,27.423-15.4331"
+                        transform="translate(0 -4.5651)" />
+                    <path id="middle" class="cls-2"
+                        d="M5.0794,31.0257c-2.2665,0-4.1037,2.25-4.1037,5.026a4.7342,4.7342,0,0,0,4.1037,5.0259l30.5219,6.7047,27.423-15.4331"
+                        transform="translate(0 -4.5651)" />
+                    <path id="back" class="cls-2"
+                        d="M5.0794,20.9738C2.8129,20.9738.9757,23.224.9757,26a4.7342,4.7342,0,0,0,4.1037,5.026l14.8884,3.27m8.91,1.9573L35.6013,37.73l27.423-15.4331"
+                        transform="translate(0 -4.5651)" />
+                    <path id="cover" class="cls-3" d="M32.5025,5.5408,4.34,20.9738l31.2611,6.7046,27.4229-15.433Z"
+                        transform="translate(0 -4.5651)" />
+                    <path id="logo" class="cls-4" d="M34.6061,11.45,27.5376,15.45,38.889,17.9436l7.0683-4.0005Z"
+                        transform="translate(0 -4.5651)" />
+                    <path id="mark" class="cls-5" d="M22.32,29.12V39.3268l2.2751-1.4142L27.1162,40.68v-10.76Z"
+                        transform="translate(0 -4.5651)" />
+                </g>
+            </svg>
+            Library
+        </h1>
+        <div>
+            <a href="" id="change_link">
+                <svg width="54" height="48" viewBox="0 0 54 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M53.0607 13.0607C53.6464 12.4749 53.6464 11.5251 53.0607 10.9393L43.5147 1.3934C42.9289 0.807612 41.9792 0.807612 41.3934 1.3934C40.8076 1.97918 40.8076 2.92893 41.3934 3.51472L49.8787 12L41.3934 20.4853C40.8076 21.0711 40.8076 22.0208 41.3934 22.6066C41.9792 23.1924 42.9289 23.1924 43.5147 22.6066L53.0607 13.0607ZM0.93934 34.9393C0.353553 35.5251 0.353553 36.4749 0.93934 37.0607L10.4853 46.6066C11.0711 47.1924 12.0208 47.1924 12.6066 46.6066C13.1924 46.0208 13.1924 45.0711 12.6066 44.4853L4.12132 36L12.6066 27.5147C13.1924 26.9289 13.1924 25.9792 12.6066 25.3934C12.0208 24.8076 11.0711 24.8076 10.4853 25.3934L0.93934 34.9393ZM2 13.5H52V10.5H2V13.5ZM52 34.5L2 34.5L2 37.5L52 37.5L52 34.5Z"
+                        fill="black" />
+                </svg>
+
+            </a>
+            <a href="#" id="settings_link" title="Settings"><svg viewBox="0 0 24 24">
+                    <path
+                        d="M12,15.5A3.5,3.5 0 0,1 8.5,12A3.5,3.5 0 0,1 12,8.5A3.5,3.5 0 0,1 15.5,12A3.5,3.5 0 0,1 12,15.5M19.43,12.97C19.47,12.65 19.5,12.33 19.5,12C19.5,11.67 19.47,11.34 19.43,11L21.54,9.37C21.73,9.22 21.78,8.95 21.66,8.73L19.66,5.27C19.54,5.05 19.27,4.96 19.05,5.05L16.56,6.05C16.04,5.66 15.5,5.32 14.87,5.07L14.5,2.42C14.46,2.18 14.25,2 14,2H10C9.75,2 9.54,2.18 9.5,2.42L9.13,5.07C8.5,5.32 7.96,5.66 7.44,6.05L4.95,5.05C4.73,4.96 4.46,5.05 4.34,5.27L2.34,8.73C2.21,8.95 2.27,9.22 2.46,9.37L4.57,11C4.53,11.34 4.5,11.67 4.5,12C4.5,12.33 4.53,12.65 4.57,12.97L2.46,14.63C2.27,14.78 2.21,15.05 2.34,15.27L4.34,18.73C4.46,18.95 4.73,19.03 4.95,18.95L7.44,17.94C7.96,18.34 8.5,18.68 9.13,18.93L9.5,21.58C9.54,21.82 9.75,22 10,22H14C14.25,22 14.46,21.82 14.5,21.58L14.87,18.93C15.5,18.67 16.04,18.34 16.56,17.94L19.05,18.95C19.27,19.03 19.54,18.95 19.66,18.73L21.66,15.27C21.78,15.05 21.73,14.78 21.54,14.63L19.43,12.97Z" />
+                </svg>
+            </a>
+            <a id="default_link" title="Reset to Default" href="#"><svg viewBox="0 0 24 24">
+                    <path
+                        d="M13.5,8H12V13L16.28,15.54L17,14.33L13.5,12.25V8M13,3A9,9 0 0,0 4,12H1L4.96,16.03L9,12H6A7,7 0 0,1 13,5A7,7 0 0,1 20,12A7,7 0 0,1 13,19C11.07,19 9.32,18.21 8.06,16.94L6.64,18.36C8.27,20 10.5,21 13,21A9,9 0 0,0 22,12A9,9 0 0,0 13,3" />
+                </svg>
+            </a>
         </div>
     </header>
-    <main class="main">
-        <div class="container">
-            <div class="books-grid" id="booksGrid"></div>
-        </div>
+    <!-- -- Main -- -->
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <label for="select_all">Select/Deselect All</label>
+                        <input type="checkbox" name="" id="select_all" title="Select/Deselect All">
+                    </th>
+                    <th><a href="#" id="head_title">Title</a></th>
+                    <th><a href="" id="head-author">Author</a></th>
+                    <th><a href="#" id="head_pages">Pages</a></th>
+                    <th><a href="#" id="head_published">Published</a></th>
+                    <th><a href="#" id="head_acquired">Acquired</a></th>
+                    <th><a href="#" id="head_status">Status</a></th>
+                    <th>&nbsp;</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+                <tr>
+                    <td>
+                        <a id="delete_group" title="Delete Selected" href="#"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M9,3V4H4V6H5V19A2,2 0 0,0 7,21H17A2,2 0 0,0 19,19V6H20V4H15V3H9M9,8H11V17H9V8M13,8H15V17H13V8Z" />
+                            </svg></a>
+                    </td>
+                    <td colspan="7">
+                        <a id="recycle_link" title="Deleted Books" href="#"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M21.82,15.42L19.32,19.75C18.83,20.61 17.92,21.06 17,21H15V23L12.5,18.5L15,14V16H17.82L15.6,12.15L19.93,9.65L21.73,12.77C22.25,13.54 22.32,14.57 21.82,15.42M9.21,3.06H14.21C15.19,3.06 16.04,3.63 16.45,4.45L17.45,6.19L19.18,5.19L16.54,9.6L11.39,9.69L13.12,8.69L11.71,6.24L9.5,10.09L5.16,7.59L6.96,4.47C7.37,3.64 8.22,3.06 9.21,3.06M5.05,19.76L2.55,15.43C2.06,14.58 2.13,13.56 2.64,12.79L3.64,11.06L1.91,10.06L7.05,10.14L9.7,14.56L7.97,13.56L6.56,16H11V21H7.4C6.47,21.07 5.55,20.61 5.05,19.76Z" />
+                            </svg></a>
+                        <a id="add_link" title="Add New Book" href="#"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12.35 20H10V17H12.09C12.21 16.28 12.46 15.61 12.81 15H10V12H14V13.54C14.58 13 15.25 12.61 16 12.35V12H20V12.35C20.75 12.61 21.42 13 22 13.54V5C22 3.9 21.1 3 20 3H4C2.9 3 2 3.9 2 5V20C2 21.1 2.9 22 4 22H13.54C13 21.42 12.61 20.75 12.35 20M16 7H20V10H16V7M10 7H14V10H10V7M8 20H4V17H8V20M8 15H4V12H8V15M8 10H4V7H8V10M17 14H19V17H22V19H19V22H17V19H14V17H17V14" />
+                            </svg></a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
     </main>
-    <footer>
-        <h1>Copyright</h1>
-    </footer>
-    <div class="modal" id="addBookModal">
-        <form class="add-book-form" id="addBookForm">
-            <h3>Add new book</h3>
-            <input type="text" class="input" id="title" placeholder="Title" maxlength="100" required>
-            <p class="error-msg" id="errorMsg"></p>
-            <input type="text" class="input" id="author" placeholder="Author" maxlength="100" required>
-            <input type="number" class="input" id="pages" placeholder="Pages" min="0" max="10000" required>
-            <div class="is-read">
-                <label for="isRead">Have you read it?</label>
-                <input type="checkbox" class="checkbox" id="isRead">
-            </div>
-            <button class="btn btn-light-green" type="submit">Add</button>
-        </form>
+    <!-- -- Footer -- -->
+    <footer></footer>
+    <!-- -- Modals -- -->
+    <div id="modal">
+        <!-- -- Settings -- -->
+        <div id="modal_settings">
+            <h3>Settings</h3>
+            <form>
+                <label for="color-accent">Accent Color</label>
+                <input type="color" name="color-accent" id="color-accent">
+                <label for="color-text">Text Color</label>
+                <input type="color" name="color-text" id="color-text">
+                <label for="color-bg">Background</label>
+                <input type="color" name="color-bg" id="color-bg">
+                <label for="color-dark">Header Color</label>
+                <input type="color" name="color-dark" id="color-dark">
+                <label for="color-light">Title Color</label>
+                <input type="color" name="color-light" id="color-light" required>
+                <label for="color-schema">Browser Theme</label>
+                <select name="color-scheme" id="color-scheme">
+                    <option value="dark">Dark Mode</option>
+                    <option value="light">Light Mode</option>
+                </select>
+                <button type="button" id="settings-reset">Reset</button>
+                <button type="button" id="settings-save">Save</button>
+            </form>
+        </div>
     </div>
-    <div class="overlay" id="overlay"></div>
 </body>
 
 </html>

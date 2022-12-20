@@ -1,0 +1,50 @@
+:root {
+  --modal-transition: all 0.2s ease-out;
+  --modal-close-animate: rotate(360deg) scale(1.3);
+  --modal-close-size: 2em;
+  --modal-close-offset: 0.5em;
+}
+
+#modal {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  transition: var(--modal-transition);
+  opacity: 0;
+}
+
+#modal > div {
+  display: none;
+  opacity: 0;
+  position: relative;
+  transition: var(--modal-transition);
+}
+
+#modal .close_modal {
+  height: var(--modal-close-size);
+  position: absolute;
+  right: var(--modal-close-offset);
+  top: var(--modal-close-offset);
+  transition: var(--modal-transition);
+  width: var(--modal-close-size);
+}
+
+#modal .close_modal:hover {
+  transform: var(--modal-close-animate);
+}
+
+#modal .close_modal svg {
+  transition: var(--modal-transition);
+}
+
+#modal .close_modal svg path {
+  transition: var(--modal-transition);
+}
