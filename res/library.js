@@ -22,7 +22,6 @@ class Library {
    * @Constructor
    */
   constructor() {
-    console.log("@^@^@^");
     //Load Modules
     this.modal = new Modal();
     this.theme = new Theme(this.modal);
