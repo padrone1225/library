@@ -293,6 +293,18 @@ footer {
   text-align: center;
 }
 
+#modal .close_modal svg {
+  filter: drop-shadow(var(--shadow-text));
+}
+
+#modal .close_modal svg path {
+  fill: var(--color-accent);
+}
+
+#modal .close_modal:hover svg {
+  filter: drop-shadow(var(--glow-text));
+}
+
 /* Settings */
 
 #modal_settings {

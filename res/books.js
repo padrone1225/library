@@ -90,6 +90,46 @@ class Books {
   }
 
   /**
+   * Add/Edit Book in Library
+   */
+  addBook() {}
+
+  /**
+   * Move Book from Library to Trash
+   * @param {string} bookID - Book ID
+   */
+  deleteBook(bookID) {
+    // Get Book index from Book ID
+    const index = this.indexFromBookID(bookID);
+
+    // Delete Book
+    this.books[index].delete();
+
+    // Add Book to Trash
+    this.addTrashOption(this.books[index]);
+  }
+
+  /**
+   * Open Edit Modal or Delete Book
+   * @param {object} e  - Event Object
+   */
+  editEntry(e) {
+    e.preventDefault();
+
+    // Get Data from Element
+    const bookID = e.currentTarget.dataset.id;
+    const action = e.currentTarget.dataset.action;
+
+    if (action === "delete") {
+      // Delete Entry
+      this.deleteBook(bookID);
+    } else {
+      // Edit Entry
+    }
+    console.log("entry");
+  }
+
+  /**
    * Add Book to Table
    * @param {Book} book - Book Object
    */
@@ -142,6 +182,14 @@ class Books {
       /************** Update */
     });
 
+    // Add Event Listeners for Edit Buttons
+    const a = row.querySelectorAll(".book_edit a");
+    for (let i = 0; i < a.length; i++) {
+      a[i].addEventListener("click", (e) => {
+        this.editEntry(e);
+      });
+    }
+
     // Add Row to Table
     this.tableBody.appendChild(row);
   }
@@ -157,6 +205,20 @@ class Books {
         // Load Books into Library
         this.loadBooks(json);
       });
+  }
+
+  /**
+   * Add Option to Recycle Bin
+   * @param {Book} book - Book Object
+   */
+  addTrashOption(book) {
+    // Create Option
+    const option = document.createElement("option");
+    option.value = book.id;
+    option.innerText = `"${book.getTitle()}" - ${book.getAuthor()}`;
+
+    // Add Option to Recycle Bin
+    this.recycleBin.appendChild(option);
   }
 
   /**
