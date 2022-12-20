@@ -1,0 +1,276 @@
+@import url("./modal.css");
+
+:root {
+  /* Default Colors */
+  --color-bg: #666;
+  --color-text: #ccc;
+  --color-dark: #333;
+  --color-light: #eee;
+  --color-accent: #ff9c00;
+
+  /* Shadows/Glow */
+  --shadow-text: 0.05em 0.05em 0.2em rgba(0, 0, 0, 0.6);
+  --shadow-box: 0 0 1em rgba(0, 0, 0, 0.5);
+  --glow-text: 0 0 0.1em var(--color-accent);
+  --glow-box: 0 0 0.3 var(--color-accent);
+
+  /* Borders */
+  --border-solid: 1px solid var(--color-dark);
+  --outline-solid: 2px solid var(--color-accent);
+
+  /* Browser Color Scheme */
+  color-scheme: dark;
+
+  /* Transitions */
+  --transition-all: none;
+  --enable-all: all 0.3s ease-out;
+}
+
+* {
+  accent-color: var(--color-accent);
+  box-sizing: border-box;
+  cursor: default;
+}
+
+/* Base CSS */
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg)
+    radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12pt;
+  margin: 0;
+  min-height: 100vh;
+  padding: 2em 10vw;
+  text-shadow: var(--shadow-text);
+}
+
+/* Header CSS */
+
+header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  white-space: nowrap;
+}
+
+header h1 {
+  color: var(--color-light);
+  font-weight: normal;
+  letter-spacing: 0.5em;
+  margin: 0 0 1rem 1rem;
+  text-transform: uppercase;
+}
+
+header h1 svg {
+  filter: drop-shadow(0.1em 0.1em 0.04em rgba(0, 0, 0 0.4));
+  height: 1.5em;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: auto;
+}
+
+header h1 svg .cls-1 {
+  fill: var(--color-light);
+}
+header h1 svg .cls-1,
+.cls-5 {
+  fill-rule: evenodd;
+}
+header h1 svg .cls-2 {
+  fill: none;
+  stroke-width: 2px;
+}
+header h1 svg .cls-2,
+.cls-3,
+.cls-4 {
+  stroke: var(--color-dark);
+}
+header h1 svg .cls-3 {
+  fill: var(--color-dark);
+  stroke-width: 2px;
+}
+header h1 svg .cls-4 {
+  fill: var(--color-accent);
+  stroke-width: 1;
+}
+header h1 svg .cls-5 {
+  fill: var(--color-accent);
+}
+
+header div {
+  margin-right: 1em;
+}
+
+header div a {
+  display: inline-block;
+  margin-left: 1em;
+  /* transition: var(--transition-all); */
+  transition: var(--enable-all);
+  /* transition: all 0.3s ease-out; */
+}
+
+header div a svg {
+  filter: drop-shadow(var(--shadow-text));
+  height: 2.5em;
+  transition: var(--transition-all);
+  width: 2.5em;
+}
+
+header div svg path {
+  fill: var(--color-accent);
+}
+
+header div a:hover {
+  transform: rotate(-360deg) scale(1.2);
+}
+
+header div a:hover svg {
+  filter: drop-shadow(var(--glow-text));
+}
+
+/*----- Main -----*/
+main {
+  flex: 1;
+}
+
+/*---  Table  ---*/
+main table {
+  border: var(--border-solid);
+  border-collapse: collapse;
+  border-spacing: 0;
+  box-shadow: var(--shadow-box);
+  width: 100%;
+}
+
+main table td a svg {
+  filter: drop-shadow(var(--shadow-text));
+  height: 1.5em;
+  width: 1.5em;
+  transition: var(--enable-all);
+}
+
+main table td a svg path {
+  fill: var(--color-accent);
+}
+
+main table td a:hover svg {
+  filter: drop-shadow(var(--glow-text));
+  height: 1.5em;
+  transform: scale(1.5);
+  width: 1.5em;
+}
+
+main table td a:hover svg path {
+  fill: var(--color-accent);
+}
+
+/* Table Head */
+
+main thead tr {
+  background-color: var(--color-dark);
+}
+
+main thead th {
+  border: 0;
+  font-weight: normal;
+  padding: 0.3em 0;
+}
+
+main thead th .asc::after {
+  content: "▾";
+  height: 1em;
+  width: 1em;
+  margin-right: 0;
+}
+
+main thead th .dec::after {
+  content: "▴";
+  height: 1em;
+  width: 1em;
+  margin-right: 0;
+}
+
+main thead th label {
+  display: none;
+}
+
+/* Table Body */
+main tbody tr {
+  border: var(--border-solid);
+  transition: var(--transition-all);
+}
+
+main tbody tr:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Table Foot */
+main tfoot tr {
+  background-color: var(--color-dark);
+}
+
+main tfoot td {
+  padding: 0.3em 1em;
+}
+
+main tfoot tr td:first-child {
+  text-align: center;
+}
+
+main tfoot tr td:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+main tfoot td:last-child a {
+  display: inline-block;
+  margin-left: 0.4em;
+}
+
+main tfoot td:last-child a svg {
+  height: 2em;
+  width: 2em;
+}
+
+/*----- Modals -----*/
+
+#modal > div {
+  background-color: var(--color-bg);
+  border: var(--border-solid);
+  border-radius: 1em;
+  box-shadow: var(--shadow-box);
+  padding: 2em;
+}
+
+#modal div h3 {
+  font-weight: normal;
+  margin: 0 0 1em;
+  text-align: center;
+}
+
+/* Settings */
+
+#modal_settings {
+  display: none;
+}
+
+#modal_settings form {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr 1fr;
+}
+
+#modal_settings form input[type="color"] {
+  display: block;
+  width: 100%;
+}

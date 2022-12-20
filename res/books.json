@@ -1,0 +1,91 @@
+[{
+    "id"        : "kz6hsec5",
+    "title"     : "The Divine Comedy",
+    "author"    : "Dante Alighieri",
+    "pages"     : 928,
+    "published" : "1492-01-01",
+    "acquired"  : "2020-09-10",
+    "status"    : 1,
+    "deleted"   : 0
+}, {
+    "id"        : "kz6httjb",
+    "title"     : "A People's History of the United States",
+    "author"    : "Howard Zinn",
+    "pages"     : 729,
+    "published" : "1980-06-06",
+    "acquired"  : "2021-05-08",
+    "status"    : 0,
+    "deleted"   : 0
+}, {
+    "id"        : "kz6hwx3k",
+    "title"     : "Thus Spoke Zarathustra",
+    "author"    : "Friedrich Nietzsche",
+    "pages"     : 352,
+    "published" : "1892-07-07",
+    "acquired"  : "2022-02-02",
+    "status"    : 1,
+    "deleted"   : 0
+}, {
+    "id"        : "kza8fqhu",
+    "title"     : "On the Genealogy of Morality",
+    "author"    : "Friedrich Nietzsche",
+    "pages"     : 723,
+    "published" : "1887-07-07",
+    "acquired"  : "2021-12-25",
+    "status"    : 0,
+    "deleted"   : 0
+}, {
+    "id"        : "kza8k7l1",
+    "title"     : "Hegemony or Survival: America's Quest for Global Dominance",
+    "author"    : "Noam Chomsky",
+    "pages"     : 304,
+    "published" : "2003-10-01",
+    "acquired"  : "2020-04-01",
+    "status"    : 0,
+    "deleted"   : 0
+}, {
+    "id"        : "kza8mvsm",
+    "title"     : "Media Control: The Spectacular Achievements of Propaganda",
+    "author"    : "Noam Chomsky",
+    "pages"     : 112,
+    "published" : "1991-01-01",
+    "acquired"  : "2020-05-17",
+    "status"    : 1,
+    "deleted"   : 0
+}, {
+    "id"        : "kza8qfht",
+    "title"     : "Fear and Loathing in Las Vegas",
+    "author"    : "Hunter S. Thompson",
+    "pages"     : 224,
+    "published" : "1971-11-11",
+    "acquired"  : "2019-08-13",
+    "status"    : 1,
+    "deleted"   : 0
+}, {
+    "id"        : "pl6hwx3k",
+    "title"     : "The Art of War",
+    "author"    : "Sun Tzu",
+    "pages"     : 68,
+    "published" : "0000-01-01",
+    "acquired"  : "2022-01-20",
+    "status"    : 1,
+    "deleted"   : 0
+}, {
+    "id"        : "sdahwx3k",
+    "title"     : "Nineteen Eighty-Four",
+    "author"    : "George Orwell",
+    "pages"     : 328,
+    "published" : "1949-06-08",
+    "acquired"  : "2020-10-31",
+    "status"    : 1,
+    "deleted"   : 1
+}, {
+    "id"        : "lk6hsec5",
+    "title"     : "Brave New World",
+    "author"    : "Aldous Huxley",
+    "pages"     : 311,
+    "published" : "1932-06-01",
+    "acquired"  : "2021-05-08",
+    "status"    : 1,
+    "deleted"   : 1
+}]
