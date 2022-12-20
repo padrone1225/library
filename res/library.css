@@ -242,6 +242,41 @@ main tfoot td:last-child a svg {
   width: 2em;
 }
 
+/*----- Summary -----*/
+#summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  margin: 1em 0 0;
+  width: 100%;
+}
+
+#summary div {
+  background-color: var(--color-dark);
+  border: var(--border-solid);
+  border-radius: 1em;
+  box-shadow: var(--shadow-box);
+  flex: 1;
+  font-size: 0.8rem;
+  padding: 1em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+#summary span {
+  color: var(--color-light);
+  display: block;
+  font-size: 1.8rem;
+}
+
+/*----- Footer -----*/
+footer {
+  font-size: 0.8rem;
+  padding: 2em 0 0;
+  text-align: center;
+}
+
 /*----- Modals -----*/
 
 #modal > div {
