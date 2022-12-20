@@ -2,10 +2,10 @@
 
 :root {
   /* Default Colors */
-  --color-bg: #666;
-  --color-text: #ccc;
-  --color-dark: #333;
-  --color-light: #eee;
+  --color-bg: #666666;
+  --color-text: #cccccc;
+  --color-dark: #333333;
+  --color-light: #eeeeee;
   --color-accent: #ff9c00;
 
   /* Shadows/Glow */
